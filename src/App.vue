@@ -1,12 +1,34 @@
 <template>
-  <div id="nav">
+  <MenuBar />
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </div>
+  </div> -->
   <router-view/>
 </template>
 
+<script>
+import MenuBar from "./components/MenuBar.vue"
+
+export default {
+  components : {
+    MenuBar
+  }
+  
+}
+</script>
+
 <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
