@@ -26,6 +26,7 @@ export default {
   top: 0;
   background-color: white;
   box-shadow: 0 2px 8px 0 rgb(128 128 128);
+  z-index: 100;
 }
 #menubar ol{
   list-style: none;
@@ -37,6 +38,7 @@ export default {
 }
 #menubar ol > li {
   padding: 0 20px;
+  color: black;
 }
 
 </style>
