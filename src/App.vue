@@ -26,8 +26,11 @@ export default {
 }
 
 /* FONT */
+/*TODO : change this to just one line at the end*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

@@ -3,24 +3,26 @@
     <h1>Ancaman Digital</h1>
     <p>Ancaman terhadap informasi sensitif pada sistem komputer atau jaringan internet. </p>
   </div>
+  <AncamanDigitalMenu />
 </template>
 
 <script>
-
+import AncamanDigitalMenu from '../components/Home/AncamanDigitalMenu.vue'
 export default {
   name: 'Home',
   components: {
-
+    AncamanDigitalMenu
   }
 }
 </script>
 
 <style scoped>
 #home {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  background-image: linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../assets/home/background.png");
+  background-image: linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../assets/home/title/background.png");
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
