@@ -11,10 +11,18 @@
 import MenuBar from "./components/MenuBar.vue"
 
 export default {
+  name : "App",
   components : {
     MenuBar
-  }
-  
+  },
+  watch: {
+        $route: {
+            immediate: true,
+            handler(to) {
+                document.title = to.meta.title || 'Ancaman Digital';
+            }
+        },
+    }
 }
 </script>
 
