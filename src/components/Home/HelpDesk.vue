@@ -27,7 +27,7 @@ export default {
         {
           image : "lapor-logo.jpeg", 
           title : "LAPOR!",
-          contents : "Buatlah pengaduan ke situs LAPOR!."
+          contents : "Buatlah pengaduan ke situs LAPOR!"
         },
         {
           image : "aduankonten.jpg", 
