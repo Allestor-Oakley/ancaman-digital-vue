@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name : 'AncamanDigitalSubMenu',
+  name : 'AncamanDigitalItem',
   props : {
     title : String,
     image : String, 

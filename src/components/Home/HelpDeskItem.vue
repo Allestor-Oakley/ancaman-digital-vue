@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name : "HelpDeskItem",
   props : {
     image : String,
     title : String,

@@ -2,7 +2,7 @@
   <div id="helpdesk">
     <h1>Helpdesk</h1>
     <div id="helpdesk-menu">
-      <HelpDeskSubMenu 
+      <HelpDeskItem
         v-for="item in items"
         :key="item.title"
         :image="item.image"
@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import HelpDeskSubMenu from './HelpDeskSubMenu.vue'
+import HelpDeskItem from './HelpDeskItem.vue'
 
 export default {
   name : 'HelpDesk',
   components : {
-    HelpDeskSubMenu
+    HelpDeskItem
   },
   data() {
     return {

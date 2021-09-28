@@ -2,7 +2,7 @@
   <div id="ad-menu">
     <h2>Ancaman Digital</h2>
     <div id="ad-menu-container" >
-      <AncamanDigitalSubMenu 
+      <AncamanDigitalItem
         v-for="item in cybercrime" 
         :key="item.title" 
         :image="item.image" 
@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import AncamanDigitalSubMenu from './AncamanDigitalSubMenu.vue'
+import AncamanDigitalItem from './AncamanDigitalItem.vue'
 export default {
   name : 'AncamanDigitalMenu',
   components : {
-    AncamanDigitalSubMenu
+    AncamanDigitalItem
   },
   data() {
     return {
