@@ -1,8 +1,8 @@
 <template>
   <div class="ancaman-digital-submenu">
     <img :src="getImgUrl(image)" :alt="image" width="48" height="48">
-    <h5> {{ title }} </h5>
-    <p> {{ contents }} </p>
+    <h5>{{ title }}</h5>
+    <p>{{ contents }}</p>
   </div>
 </template>
 

@@ -39,6 +39,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -60,4 +61,8 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+/* GLOBAL CLASS */
+/* TODO : responsive grid */
+
 </style>

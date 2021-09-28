@@ -4,14 +4,17 @@
     <p>Ancaman terhadap informasi sensitif pada sistem komputer atau jaringan internet. </p>
   </div>
   <AncamanDigitalMenu />
+  <HelpDesk />
 </template>
 
 <script>
 import AncamanDigitalMenu from '../components/Home/AncamanDigitalMenu.vue'
+import HelpDesk from '../components/Home/HelpDesk.vue'
 export default {
   name: 'Home',
   components: {
-    AncamanDigitalMenu
+    AncamanDigitalMenu,
+    HelpDesk
   }
 }
 </script>
