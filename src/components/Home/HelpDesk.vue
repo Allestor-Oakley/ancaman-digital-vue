@@ -77,5 +77,14 @@ export default {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   position: relative;
   bottom: 100px;
+  pointer-events: none;
+}
+#helpdesk-menu > div{
+	transition: transform 0.2s, opacity 0.1s;
+	pointer-events : auto;
+  opacity: 1;
+}
+#helpdesk-menu:hover > div:hover {
+  transform: scale(1.13);
 }
 </style>
