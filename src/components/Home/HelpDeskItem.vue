@@ -44,5 +44,6 @@ export default {
 .helpdesk-submenu p {
   font-family: 'Montserrat', sans-serif;
   margin: 11px 0;
+  line-height: 1.6;
 }
 </style>

@@ -66,7 +66,7 @@ export default {
   font-weight: normal;
   font-size: 48px;
   position: relative;
-  top: 100px;
+  top: 20px;
 }
 #helpdesk-menu {
   width: 1140px;
@@ -76,6 +76,6 @@ export default {
   grid-auto-flow: row;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   position: relative;
-  bottom: 10px;
+  bottom: 100px;
 }
 </style>
