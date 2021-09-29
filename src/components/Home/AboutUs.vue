@@ -36,7 +36,7 @@ export default {
           image : "pramuka-yusuf.png",
           contents : "Halo, nama saya Yusuf, saya suka membaca dan coding. Saya bekerja sebagai web desainer di tim ini",
           ypos : "34.62",
-        }
+        },
       ]
     }
   }
