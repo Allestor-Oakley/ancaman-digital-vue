@@ -78,5 +78,17 @@ export default {
   min-height: 253px;
   position: relative;
   top: 50px;
+  pointer-events: none;
+}
+#ad-menu-container > div{
+	transition: transform 0.2s, opacity 0.1s;
+	pointer-events : auto;
+  opacity: 1;
+}
+#ad-menu-container:hover > div:not(:hover)  {
+  opacity: 0.5;
+}
+#ad-menu-container:hover > div:hover {
+  transform: scale(1.13);
 }
 </style>
