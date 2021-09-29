@@ -5,15 +5,17 @@
     <router-link to="/about">About</router-link>
   </div> -->
   <router-view/>
+  <Footer />
 </template>
 
 <script>
 import MenuBar from "./components/MenuBar.vue"
-
+import Footer from './components/FooterCopyright.vue'
 export default {
   name : "App",
   components : {
-    MenuBar
+    MenuBar,
+    Footer
   },
   watch: {
         $route: {
