@@ -1,8 +1,8 @@
 <template>
   <div id="menubar">
     <ol>
-      <li>Home</li>
-      <li>Hacking</li>
+      <li><router-link class="link-no-style" to="/">Home</router-link></li>
+      <li><router-link class="link-no-style" to="/Hack">Hacking</router-link></li>
       <li>Hoax</li>
       <li>Malware</li>
       <li>Scam</li>
@@ -13,7 +13,6 @@
 <script>
 export default {
   name : "MenuBar"
-  
 }
 </script>
 
@@ -40,5 +39,8 @@ export default {
   padding: 0 20px;
   color: black;
 }
-
+.link-no-style {
+  text-decoration: none;
+  color: inherit;
+}
 </style>
