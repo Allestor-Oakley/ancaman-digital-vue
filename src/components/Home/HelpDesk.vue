@@ -7,7 +7,9 @@
         :key="item.title"
         :image="item.image"
         :title="item.title"
-        :contents="item.contents"/>
+        :contents="item.contents"
+        :link="item.link"
+      />
     </div>
 
   </div>
@@ -27,22 +29,26 @@ export default {
         {
           image : "lapor-logo.jpeg", 
           title : "LAPOR!",
-          contents : "Buatlah pengaduan ke situs LAPOR!."
+          contents : "Buatlah pengaduan ke situs LAPOR!.",
+          link : "https://www.lapor.go.id/"
         },
         {
           image : "aduankonten.jpg", 
           title : "AduanKonten",
-          contents : "Laporkan konten negatif ke aduankonten."
+          contents : "Laporkan konten negatif ke aduankonten.",
+          link : "https://www.aduankonten.id/"
         },
         {
           image : "ikon-polisi-siber.png", 
           title : "Patroli Siber",
-          contents : "Laporkan kejahatan siber ke situs Patroli siber."
+          contents : "Laporkan kejahatan siber ke situs Patroli siber.",
+          link : "https://patrolisiber.id/report/my-account"
         },
         {
           image : "pikobar.jpg", 
           title : "Pikobar",
-          contents : "Pusat informasi COVID 19 Jawa Barat."
+          contents : "Pusat informasi COVID 19 Jawa Barat.",
+          link : "https://pikobar.jabarprov.go.id/"
         },
       ]
     }

@@ -1,8 +1,10 @@
 <template>
   <div class="helpdesk-submenu scroll-reveal fade-in">
-    <img :src="getImgUrl(image)" :alt="image" width="107">
-    <h4>{{ title }}</h4>
-    <p>{{ contents }}</p>
+    <a :href="`${link}`" target="_blank">
+      <img :src="getImgUrl(image)" :alt="image" width="107">
+      <h4>{{ title }}</h4>
+      <p>{{ contents }}</p>
+    </a>
   </div>
 </template>
 
@@ -12,7 +14,8 @@ export default {
   props : {
     image : String,
     title : String,
-    contents : String
+    contents : String,
+    link : String
   },
   methods : {
     getImgUrl(pic) {
@@ -24,6 +27,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
 .helpdesk-submenu {
   color: white;
   display: flex;
