@@ -9,6 +9,8 @@
         :image="person.image"
         :contents="person.contents"
         :ypos="person.ypos"
+        :whatsapp="person.whatsapp"
+        :instagram="person.instagram"
       />
     </div>
   </div>
@@ -30,12 +32,16 @@ export default {
           image : "rafi-kontingen.jpg",
           contents : "Nama saya Rafi, hobi saya menulis dan menggambar. Saya bekerja di tim ini sebagai konten kreator.",
           ypos : "19.94",
+          whatsapp : "https://wa.me/6281322524858",
+          instagram : "https://www.instagram.com/mrafirmdhn_/"
         },
         {
           name : "Yusuf Rahman P.",
           image : "foto-pramuka-yusuf.png",
           contents : "Halo, nama saya Yusuf, saya suka membaca dan coding. Saya bekerja sebagai web desainer di tim ini.",
           ypos : "34.62",
+          whatsapp : "https://wa.me/6281380035179",
+          instagram : "https://www.instagram.com/y.rahman.p/"
         },
       ]
     }
