@@ -82,7 +82,7 @@ export default {
 #helpdesk-menu > div{
 	transition: transform 0.2s, opacity 0.1s;
 	pointer-events : auto;
-  opacity: 1;
+  /* opacity: 1; */
 }
 #helpdesk-menu:hover > div:hover {
   transform: scale(1.13);

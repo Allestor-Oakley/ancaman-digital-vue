@@ -83,7 +83,7 @@ export default {
 #ad-menu-container > div{
 	transition: transform 0.2s, opacity 0.1s;
 	pointer-events : auto;
-  opacity: 1;
+  /* opacity: 1; */
 }
 #ad-menu-container:hover > div:not(:hover)  {
   opacity: 0.5;
