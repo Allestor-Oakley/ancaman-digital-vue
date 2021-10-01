@@ -130,6 +130,10 @@ export default {
     opacity: 1;
   }
 }
+/*PARAGRAPH*/
+p {
+  line-height: 1.6;
+}
 /* TODO : responsive grid */
 
 </style>
