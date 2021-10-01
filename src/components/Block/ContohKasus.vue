@@ -41,6 +41,7 @@ export default {
   font-family: 'Titillium Web', sans-serif;
   font-size: 48px;
   font-weight: normal;
+  color: black;
 }
 #contoh-kasus-menu {
   width: 1140px;
