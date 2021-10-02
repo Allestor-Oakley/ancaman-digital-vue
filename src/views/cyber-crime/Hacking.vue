@@ -10,22 +10,29 @@
   </Judul>
   <ContohKasus 
     :items="contohKasus.items"
-    :imageFolder="contohKasus.imageFolder"
+    :imageFolder="name"
+  />
+  <TipsAndTrick 
+    :items="tipsAndTrick.items"
+    :imageFolder="name"
   />
 </template>
 
 <script>
 import Judul from '../../components/Block/Judul.vue';
 import ContohKasus from '../../components/Block/ContohKasus.vue'
+import TipsAndTrick from '../../components/Block/TipsAndTrick.vue'
 
 export default {
   name : "Hack",
   components : {
     Judul,
-    ContohKasus
+    ContohKasus,
+    TipsAndTrick
   },
   data() {
     return {
+      name : "hacking",
       judul : {
         color1 : "#1a1a1a",
         color2 : "#555c66",
@@ -33,7 +40,6 @@ export default {
         context : "Kegiatan mengakses informasi digital tanpa kewenangan akses yang sah."
       },
       contohKasus : {
-        imageFolder : "hacking",
         items: [
           {
             image : "dewan-penghianat-rakyat.jpg",
@@ -47,6 +53,25 @@ export default {
             image : "yahoo-logo.jpg",
             context : "Situs Yahoo terkena serangan pencurian data besar-besaran pada 2014, mengakibatkan setidaknya kebocoran data 500 juta pengguna."
           },
+        ]
+      },
+      tipsAndTrick : {
+        items : [
+          {
+            image : "download.jpg",
+            title : "Download dari Situs Resmi",
+            context : "Jangan mengunduh dari situs-situs yang tidak resmi dan tidak jelas status keamanannya. Seringkali ada file-file bermuatan virus, malware, dan lain sebagainya pada situs yang tidak resmi, karena kurangnya regulasi keamanan disana. Periksa nama dan domain website. "
+          },
+          {
+            image : "link.jpg",
+            title : "Jangan Klik Tautan Sembarangan",
+            context : "Jangan pernah menekan tautan yang tidak diketahui sembarangan. Periksa dahulu nama dan domain tautan tersebut. Berhati-hatilah, apabila nama dan domainnya terkesan aneh dan tidak wajar atau acak, bisa jadi itu merupakan jebakan phishing."
+          },
+          {
+            image : "usb.jpg",
+            title : "Pindai Hard Drive atau USB Sebelum Digunakan",
+            context : "Pindai/Scan hard drive, usb, flashdisk, dan lainnya. Dengan demikian apabila ternyata ada suatu masalah seperti keberadaan malware di dalam perangkat penyimpanan tersebut, kita akan mengetahuinya sebelum terjadi kerusakan."
+          }
         ]
       }
     }

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Hacking from '../views/cyber-crime/Hacking.vue'
 
 const routes = [
   {
@@ -13,7 +14,10 @@ const routes = [
   {
     path : "/Hack",
     name : "Hack", 
-    component : () => import('../views/cyber-crime/Hacking.vue')
+    component : Hacking,
+    meta : {
+      title : "Hacking"
+    }
   },
   {
     path: '/about',
@@ -27,7 +31,15 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior() {
+    if (document.getElementById("home")){ 
+      document.getElementById("home").scrollIntoView() 
+    }
+    else {
+      document.getElementById("title").scrollIntoView()
+    }
+  }
 })
 
 export default router
