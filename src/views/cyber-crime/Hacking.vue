@@ -16,19 +16,26 @@
     :items="tipsAndTrick.items"
     :imageFolder="name"
   />
+  <Penanganan 
+    :image="penanganan.image"
+    :imageFolder="name"
+    :content="penanganan.content"
+  />
 </template>
 
 <script>
 import Judul from '../../components/Block/Judul.vue';
 import ContohKasus from '../../components/Block/ContohKasus.vue'
 import TipsAndTrick from '../../components/Block/TipsAndTrick.vue'
+import Penanganan from '../../components/Block/Penanganan.vue'
 
 export default {
   name : "Hack",
   components : {
     Judul,
     ContohKasus,
-    TipsAndTrick
+    TipsAndTrick,
+    Penanganan
   },
   data() {
     return {
@@ -72,6 +79,18 @@ export default {
             title : "Pindai Hard Drive atau USB Sebelum Digunakan",
             context : "Pindai/Scan hard drive, usb, flashdisk, dan lainnya. Dengan demikian apabila ternyata ada suatu masalah seperti keberadaan malware di dalam perangkat penyimpanan tersebut, kita akan mengetahuinya sebelum terjadi kerusakan."
           }
+        ]
+      },
+      penanganan : {
+        image : 'programmer.svg',
+        content : [
+          'Cari data apa saja yang sudah terkena hacking',
+          'Hubungi pihak-pihak yang terkait, seperti bank atau lembaga lainnya',
+          'Ganti password/kata sandi  dengan yang lebih kuat sesegera mungkin',
+          'Laporkan insiden kepada pemerintah dan penegak hukum',
+          'Perhatikan aktivitas mencurigakan yang terjadi setelahnya',
+          'Periksa apakah ada backdoor yang ditanam di sistem kita',
+          'Beritahu orang yang terhubung kepada kita secara digital bahwa kita sudah dihack'
         ]
       }
     }
