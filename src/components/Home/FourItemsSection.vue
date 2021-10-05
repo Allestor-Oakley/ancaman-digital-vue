@@ -55,7 +55,7 @@ export default {
 .f-menu-container:hover > div:not(:hover)  {
   opacity: 0.5;
 }
-.f-menu-container:hover > div:hover {
+.f-menu-container:hover > .ancaman-digital-submenu:hover {
   transform: scale(1.13);
 }
 
