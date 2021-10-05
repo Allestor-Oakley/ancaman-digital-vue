@@ -1,7 +1,7 @@
 <template>
-  <div id="ad-menu">
+  <section id="an-di-menu">
     <h2>Ancaman Digital</h2>
-    <div id="ad-menu-container" >
+    <div id="an-di-menu-container" >
       <AncamanDigitalItem
         v-for="item in cybercrime" 
         :key="item.title" 
@@ -9,7 +9,7 @@
         :title="item.title" 
         :contents="item.content"/>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -49,46 +49,94 @@ export default {
 </script>
 
 <style scoped>
-#ad-menu {
+#an-di-menu {
   width: 100%;
   height: 100vh;
   background-color: #fbfbfb;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding-bottom: 20vh;
   align-items: center;
   position: relative;
 }
-#ad-menu h2 {
+#an-di-menu h2 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 3rem;
   font-weight: normal;
   color: black;
-  position: absolute;
-  right: 0;
-  left: 0;
-  top: 90px;
+  position: relative;
 }
-#ad-menu-container {
+#an-di-menu-container {
   display: grid;
   grid-gap: 46px;
-  grid-auto-flow: row;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   width: 1140px;
-  min-height: 253px;
   position: relative;
   top: 50px;
   pointer-events: none;
 }
-#ad-menu-container > div{
+#an-di-menu-container > div{
 	transition: transform 0.2s, opacity 0.1s;
 	pointer-events : auto;
-  /* opacity: 1; */
+  opacity: 1;
 }
-#ad-menu-container:hover > div:not(:hover)  {
+#an-di-menu-container:hover > div:not(:hover)  {
   opacity: 0.5;
 }
-#ad-menu-container:hover > div:hover {
+#an-di-menu-container:hover > div:hover {
   transform: scale(1.13);
+}
+
+@media (max-width : 1155px) {
+  #an-di-menu-container {
+    width: 960px;
+  }
+  #an-di-menu h2 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width : 975px) {
+  #an-di-menu-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 740px;
+  }
+}
+@media (max-width: 755px) {
+  #an-di-menu-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 540px;
+    top: 10px;
+  }
+  #an-di-menu {
+    padding: 0;
+  }
+  #an-di-menu h2 {
+    font-size: 2.25rem;
+  }
+}
+@media (max-height : 600px){
+  #an-di-menu {
+    justify-content: flex-start;
+    height: 110vh;
+  }
+  #an-di-menu h2{
+    margin: 30px 0;
+  }
+}
+@media (max-width: 575px) {
+  #an-di-menu-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 240px;
+  }
+  #an-di-menu {
+    height: 1200px;
+  }
+  #an-di-menu h2 {
+    font-size: 2rem;
+  }
 }
 </style>

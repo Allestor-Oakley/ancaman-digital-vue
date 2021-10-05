@@ -10,25 +10,28 @@
 
 <script>
 import AncamanDigitalMenu from '../components/Home/AncamanDigitalMenu.vue'
-import HelpDesk from '../components/Home/HelpDesk.vue'
-import AboutUs from '../components/Home/AboutUs.vue'
+/* import HelpDesk from '../components/Home/HelpDesk.vue' */
+/* import AboutUs from '../components/Home/AboutUs.vue' */
 export default {
   name: 'Home',
   components: {
     AncamanDigitalMenu,
-    HelpDesk,
-    AboutUs
+    /* HelpDesk, */
+    /* AboutUs */
   }
 }
 </script>
 
 <style scoped>
 #home {
-  width: 100%;
+  max-width: 100%;
+  width: 100vw;
   height: 100vh;
   background-image: linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("../assets/home/title/background.png");
   background-size: cover;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position-x: 50%, 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,13 +45,26 @@ export default {
   position: relative;
   top: 20px;
 }
+@media (max-width : 767px) {
+  #home > h1 {
+    font-size: 3.75rem;
+  }
+}
+@media (max-width : 575px) {
+  #home > h1 {
+    font-size: 3rem;
+  }
+}
+
 #home > p {
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   line-height: 1.6;
-  width: 826px;
   position: relative;
   top: 30px;
+  max-width: 100%;
+  width: 100vh;
+  padding: 20px;
 }
 </style>
