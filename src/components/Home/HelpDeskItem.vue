@@ -1,5 +1,5 @@
 <template>
-  <div class="helpdesk-submenu scroll-reveal fade-in">
+  <div class="helpdesk-submenu">
     <a :href="`${link}`" target="_blank">
       <img :src="getImgUrl(image)" :alt="image" width="107">
       <h4>{{ title }}</h4>
@@ -38,6 +38,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 17px 30px;
+  height: 220px;
 }
 .helpdesk-submenu img {
   border-radius: 50%;

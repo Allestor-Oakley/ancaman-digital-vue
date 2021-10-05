@@ -1,30 +1,30 @@
 <template>
-  <div id="helpdesk">
-    <h1>Helpdesk</h1>
-    <div id="helpdesk-menu">
-      <HelpDeskItem
-        v-for="item in items"
-        :key="item.title"
-        :image="item.image"
-        :title="item.title"
-        :contents="item.contents"
-        :link="item.link"
+  <FourItemsSection :titleColor="titleColor" :background="color" title="Helpdesk">
+    <HelpDeskItem
+      v-for="item in items"
+      :key="item.title"
+      :image="item.image"
+      :title="item.title"
+      :contents="item.contents"
+      :link="item.link"
       />
-    </div>
-
-  </div>
+  </FourItemsSection>
 </template>
 
 <script>
+import FourItemsSection from './FourItemsSection.vue'
 import HelpDeskItem from './HelpDeskItem.vue'
 
 export default {
   name : 'HelpDesk',
   components : {
-    HelpDeskItem
+    HelpDeskItem,
+    FourItemsSection
   },
   data() {
     return {
+      color : "#292e32",
+      titleColor : "white",
       items : [
         {
           image : "lapor-logo.jpeg", 
@@ -57,40 +57,4 @@ export default {
 </script>
 
 <style scoped>
-#helpdesk {
-  background-color: #292e32;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-#helpdesk h1 {
-  color: white;
-  font-family: 'Titillium Web';
-  font-weight: normal;
-  font-size: 48px;
-  position: relative;
-  top: 20px;
-}
-#helpdesk-menu {
-  width: 1140px;
-  min-height: 315px;
-  display: grid;
-  grid-gap: 10px;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  position: relative;
-  bottom: 100px;
-  pointer-events: none;
-}
-#helpdesk-menu > div{
-	transition: transform 0.2s, opacity 0.1s;
-	pointer-events : auto;
-  /* opacity: 1; */
-}
-#helpdesk-menu:hover > div:hover {
-  transform: scale(1.13);
-}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="ancaman-digital-submenu scroll-reveal fade-in">
+  <div class="ancaman-digital-submenu">
     <img :src="getImgUrl(image)" :alt="image" width="48" height="48">
     <h5>{{ title }}</h5>
     <p>{{ contents }}</p>
