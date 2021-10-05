@@ -1,5 +1,5 @@
 <template>
-  <div id="about-us">
+  <section id="about-us">
     <h1>About us</h1>
     <div id="about-us-container">
       <AboutUsItem 
@@ -13,7 +13,7 @@
         :instagram="person.instagram"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -131,9 +131,44 @@ export default {
   min-height: 400px;
   display: grid;
   grid-gap: 100px;
-  grid-auto-flow: row;
   grid-template-columns: 1fr 1fr;
   position: relative;
   bottom: 40px;
+}
+
+@media (max-width : 825px) {
+  #about-us {
+    height: 120vh;
+  }
+  #about-us-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    bottom: 10px;
+    width: 450px;
+  }
+  #about-us h1{
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width : 600px){
+  #about-us-container {
+    width: 320px;
+  }
+  #about-us-container div{
+    padding: 0;
+  }
+  #about-us h1{
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width : 400px) {
+  #about-us {
+    height: 1100px;
+  }
+  #about-us-container {
+    width: 250px;
+  }
 }
 </style>

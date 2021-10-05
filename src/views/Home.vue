@@ -11,13 +11,13 @@
 <script>
 import AncamanDigitalMenu from '../components/Home/AncamanDigitalMenu.vue'
 import HelpDesk from '../components/Home/HelpDesk.vue'
-/* import AboutUs from '../components/Home/AboutUs.vue' */
+import AboutUs from '../components/Home/AboutUs.vue'
 export default {
   name: 'Home',
   components: {
     AncamanDigitalMenu,
     HelpDesk,
-    /* AboutUs */
+    AboutUs
   }
 }
 </script>
