@@ -54,4 +54,12 @@ a {
   margin: 11px 0;
   line-height: 1.6;
 }
+@media (max-width : 757px) {
+  .helpdesk-submenu h4 {
+    font-size: 22px;
+  }
+  .helpdesk-submenu p {
+    font-size: 14px;
+  }
+}
 </style>
