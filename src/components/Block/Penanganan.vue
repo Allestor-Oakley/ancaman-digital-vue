@@ -60,4 +60,31 @@ export default {
   padding-right: 30%;
   -webkit-font-smoothing: antialiased;
 }
+
+@media (max-width : 1199px) {
+  #penanganan {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-gap: 0;
+  }
+  #penanganan img {
+    display: none;
+  }
+  #penanganan p {
+    padding: 0 15%;
+  }
+}
+@media (max-width : 760px) {
+  #penanganan {
+    height: 850px;
+  }
+  #penanganan p {
+    padding: 0 80px;
+  }
+}
+@media (max-width : 495px) {
+  #penanganan p {
+    padding: 0 30px;
+  }
+}
 </style>

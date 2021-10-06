@@ -133,7 +133,7 @@ export default {
   }
   .carousel-button {
     position: absolute;
-    z-index: 100;
+    z-index: 2;
   }
   #carousel-prev {
     left: 10px;
