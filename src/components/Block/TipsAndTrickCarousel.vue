@@ -80,7 +80,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #tat-carousel {
   width: 100%;
   display: flex;
@@ -111,5 +111,47 @@ export default {
   height: 60px;
   cursor: pointer;
   opacity: 1;
+}
+
+@media (max-width : 1045px) {
+  #carousel-wrapper {
+    height: 550px;
+  }
+  #carousel-container .tat-item{
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-columns: 1fr;
+    height: 600px;
+  }
+  #carousel-container .tat-item img {
+    grid-row: 1;
+    object-fit: contain;
+    align-self: right;
+  }
+  #carousel-container .tat-item h3 {
+    grid-column: 1;
+    z-index: 10;
+  }
+  .carousel-button {
+    position: absolute;
+    z-index: 100;
+  }
+  #carousel-prev {
+    left: 10px;
+    bottom: -70px;
+  }
+  #carousel-next {
+    right: 10px;
+    bottom: -70px;
+  }
+}
+@media (max-width : 545px) {
+  #carousel-container .tat-item img {
+    width: 320px;
+  }
+}
+@media (max-width : 380px) {
+  #carousel-container .tat-item img {
+    width: 280px;
+  }
 }
 </style>

@@ -31,9 +31,7 @@ export default {
 }
 .tat-item img{
   width: 467px;
-  height: 293px;
   object-fit: contain;
-  height: 293px;
   grid-row: 1/3;
   align-self: center;
   padding: 0 auto;

@@ -42,4 +42,10 @@ export default {
   position: relative;
   bottom: 30px;
 }
+
+@media (max-width : 545px) {
+  #tips-and-trick {
+    height : 850px;
+  }
+}
 </style>
