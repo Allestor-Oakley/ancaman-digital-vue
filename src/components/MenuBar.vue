@@ -135,6 +135,12 @@ export default {
   }
 }
 
+@media (max-height :  700px) {
+  #menubar {
+    height: 65px;
+  }
+}
+
 #menubar .menu-visible{
   left: 0;
 }
