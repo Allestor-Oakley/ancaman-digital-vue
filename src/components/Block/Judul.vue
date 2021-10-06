@@ -35,7 +35,6 @@ export default {
   justify-content: center;
   height: 100vh;
   position: relative;
-  left: 10px;
   top: 15px;
 }
 #title-context h1 {
@@ -75,19 +74,21 @@ export default {
 
 @media (max-width : 500px) {
   #title {
-    padding: 0 2vh;
+    padding: 0 4vw;
   }
   #illustration {
     display: none;
   }
   #title-context {
     top: 0;
+    width: 100%;
   }
   #title-context h1{
     font-size: 3.25rem;
+    width: 100%;
   }
   #title-context p{
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     width: 100%;
   }
 }

@@ -55,6 +55,7 @@ export default {
   #contoh-kasus {
     justify-content: flex-start;
     margin-top: 50px;
+    height: 900px;
   }
   #contoh-kasus-menu {
     grid-template-columns: auto auto;
@@ -89,6 +90,7 @@ export default {
     height: 900px;
   }
   #contoh-kasus-menu {
+    margin: 50px;
     width: 250px;
     height: 700px;
   }
