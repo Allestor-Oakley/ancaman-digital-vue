@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #title {
   height: 100vh;
   width: 100%;
@@ -48,9 +48,47 @@ export default {
 #title-context p {
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
-  width: 570px;
+  width: 70%;
   text-align: left;
   margin-top: 40px;
   line-height: 1.6;
+}
+
+@media (max-width : 1060px) {
+  #title {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  #title-context {
+    height: 25%;
+  }
+  #title-context h1{
+    margin-top: 75px;
+    text-align: center;
+    font-size: 3.75rem;
+  }
+  #title-context p{
+    text-align: center;
+    width: 450px;
+  }
+}
+
+@media (max-width : 500px) {
+  #title {
+    padding: 0 2vh;
+  }
+  #illustration {
+    display: none;
+  }
+  #title-context {
+    top: 0;
+  }
+  #title-context h1{
+    font-size: 3.25rem;
+  }
+  #title-context p{
+    font-size: 1.4rem;
+    width: 100%;
+  }
 }
 </style>
