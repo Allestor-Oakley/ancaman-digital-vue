@@ -50,4 +50,47 @@ export default {
   grid-template-columns: auto auto auto;
   grid-gap: 17px;
 }
+
+@media (max-width : 1200px) {
+  #contoh-kasus {
+    justify-content: flex-start;
+    margin-top: 50px;
+  }
+  #contoh-kasus-menu {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 820px;
+    height: 700px;
+    margin-top: 80px;
+  }
+}
+@media (max-width : 900px) {
+  #contoh-kasus-menu {
+    width: 640px;
+    height: 600px;
+  }
+}
+@media (max-width : 680px) {
+  #contoh-kasus {
+    height: 1400px;
+  }
+  #contoh-kasus h1{
+    font-size: 2.25rem;
+  }
+  #contoh-kasus-menu {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 400px;
+    height: 1200px;
+  }
+}
+@media (max-width : 440px) {
+  #contoh-kasus {
+    height: 900px;
+  }
+  #contoh-kasus-menu {
+    width: 250px;
+    height: 700px;
+  }
+}
 </style>
