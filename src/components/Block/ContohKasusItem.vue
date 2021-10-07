@@ -1,9 +1,11 @@
 <template>
   <div class="contoh-kasus-item">
-    <img :src="getImageUrl()" alt="">
-    <div class="hidden-text">
-      <p>{{context}}</p>
-    </div>
+    <a href="url" target="_blank">
+      <img :src="getImageUrl()" alt="">
+      <div class="hidden-text">
+        <p>{{context}}</p>
+      </div>
+    </a>
   </div>
 </template>
 
@@ -13,7 +15,8 @@ export default {
   props : {
     imageFolder : String,
     image : String,
-    context : String
+    context : String,
+    url : String
   },
   methods : {
     getImageUrl() {

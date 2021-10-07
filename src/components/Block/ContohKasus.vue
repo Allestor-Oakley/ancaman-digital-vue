@@ -8,6 +8,7 @@
         :key="item.image"
         :image="item.image"
         :context="item.context"
+        :url="item.url"
       />
     </div>
   </section>
