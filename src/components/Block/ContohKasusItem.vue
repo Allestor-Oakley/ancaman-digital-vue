@@ -1,6 +1,6 @@
 <template>
   <div class="contoh-kasus-item">
-    <a href="url" target="_blank">
+    <a :href="`${url}`" target="_blank">
       <img :src="getImageUrl()" alt="">
       <div class="hidden-text">
         <p>{{context}}</p>
