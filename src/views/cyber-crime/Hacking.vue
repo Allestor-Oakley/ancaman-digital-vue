@@ -50,15 +50,18 @@ export default {
         items: [
           {
             image : "dewan-penghianat-rakyat.jpg",
-            context : "Pada 2020, situs website DPR RI diretas oleh aktivis, singkatan yang tertera pada website berubah menjadi “Dewan Penghianat Rakyat”. Serangan ini merupakan jenis serangan DOS."
+            context : "Pada 2020, situs website DPR RI diretas oleh aktivis, singkatan yang tertera pada website berubah menjadi “Dewan Penghianat Rakyat”. Serangan ini merupakan jenis serangan DOS.",
+            url : "https://www.kompas.tv/article/114276/situs-dpr-diretas-hacker-berubah-jadi-dewan-pengkhianat-rakyat"
           },
           {
             image : "3-tiket-rugi-miliaran-rupiah.png",
-            context : "Pada 2017, seorang remaja berumur 19 tahun memimpin dua orang lainnya untuk menyerang Tiket.com dan Citilink. Mereka mencuri kode booking penerbangan dan menjualnya di facebook dengan potongan harga sehingga banyak dibeli orang lain."
+            context : "Pada 2017, seorang remaja berumur 19 tahun memimpin dua orang lainnya untuk menyerang Tiket.com dan Citilink. Mereka mencuri kode booking penerbangan dan menjualnya di facebook dengan potongan harga sehingga banyak dibeli orang lain.",
+            url : "https://news.detik.com/berita/d-3460864/kasus-pembobolan-situs-tiket-online-ini-penjelasan-citilink"
           },
           {
             image : "yahoo-logo.jpg",
-            context : "Situs Yahoo terkena serangan pencurian data besar-besaran pada 2014, mengakibatkan setidaknya kebocoran data 500 juta pengguna."
+            context : "Situs Yahoo terkena serangan pencurian data besar-besaran pada 2014, mengakibatkan setidaknya kebocoran data 500 juta pengguna.",
+            url : "https://www.reuters.com/article/us-yahoo-cyber-idUSKCN11S16P"
           },
         ]
       },
@@ -78,7 +81,32 @@ export default {
             image : "usb.jpg",
             title : "Pindai Hard Drive atau USB Sebelum Digunakan",
             context : "Pindai/Scan hard drive, usb, flashdisk, dan lainnya. Dengan demikian apabila ternyata ada suatu masalah seperti keberadaan malware di dalam perangkat penyimpanan tersebut, kita akan mengetahuinya sebelum terjadi kerusakan."
-          }
+          },
+          {
+            image : "password.jpg",
+            title : "Gunakan Password yang Aman",
+            context : "Pakai password yang bervariasi dan sulit ditebak. Kombinasi yang aman adalah dengan memakai huruf kecil, huruf besar, angka, dan simbol seperti \"#\", jangan memakai informasi yang mudah ditebak seperti nama diri sendiri atau tanggal ulang tahun."
+          },
+          {
+            image : "akun.jpg",
+            title : "Jangan Membagikan Informasi Akun kepada Orang Lain",
+            context : "Jangan memberikan nama pengguna dan password/kata sandi kepada orang lain. Simpan informasi tersebut sebagai rahasia dan jangan sampai orang lain bisa mengetahui atau menebak informasi tersebut."
+          },
+          {
+            image : "update.jpg",
+            title : "Selalu Perbarui Perangkat Lunak",
+            context : "Perbaharui/update perangkat lunak agar galat/bug serta masalah pada versi lama hilang dengan adanya versi baru. Biasanya versi baru akan berisi perbaikan untuk masalah-masalah tersebut."
+          },
+          {
+            image : "antivirus.jpg",
+            title : "Gunakan Produk Anti Malware",
+            context : "Gunakan antivirus dan program/perangkat lunak lainnya yang berfungsi untuk mencari dan mengatasi virus dan malware, dengan begitu ancaman bisa diketahui dan langsung dihilangkan."
+          },
+          {
+            image : "usb.jpg",
+            title : "Pindai Hard Drive atau USB Sebelum Digunakan",
+            context : "Pindai/Scan hard drive, usb, flashdisk, dan lainnya. Dengan demikian apabila ternyata ada suatu masalah seperti keberadaan malware di dalam perangkat penyimpanan tersebut, kita akan mengetahuinya sebelum terjadi kerusakan."
+          },
         ]
       },
       penanganan : {
