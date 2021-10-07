@@ -110,7 +110,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #about-us{
   width: 100%;
   height: 100vh;
@@ -156,10 +156,16 @@ export default {
     width: 320px;
   }
   #about-us-container div{
-    padding: 0;
+    padding: 0 10px;
   }
   #about-us h1{
     font-size: 2.25rem;
+  }
+  #about-us-container div h2{
+    font-size: 1.75rem;
+  }
+  #about-us-container div p{
+    font-size: 0.9rem;
   }
 }
 
