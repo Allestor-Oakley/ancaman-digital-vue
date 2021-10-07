@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Hacking from '../views/cyber-crime/Hacking.vue'
+import Hoax from '../views/cyber-crime/Hoax.vue'
+import Malware from '../views/cyber-crime/Scam.vue'
+import Scam from '../views/cyber-crime/Scam.vue'
 
 const routes = [
   {
@@ -12,21 +15,45 @@ const routes = [
     }
   },
   {
-    path : "/Hack",
-    name : "Hack", 
+    path : "/Hacking",
+    name : "Hacking", 
     component : Hacking,
     meta : {
       title : "Hacking"
     }
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path : "/Hoax",
+    name : "Hoax", 
+    component : Hoax,
+    meta : {
+      title : "Hoax"
+    }
+  },
+  {
+    path : "/Malware",
+    name : "Malware", 
+    component : Malware,
+    meta : {
+      title : "Malware"
+    }
+  },
+  {
+    path : "/Scam",
+    name : "Scam", 
+    component : Scam,
+    meta : {
+      title : "Scam"
+    }
+  },
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  // }
 ]
 
 const router = createRouter({

@@ -12,10 +12,10 @@
     </div>
     <ol :class="[{'menu-visible' : menuIsVisible}]">
       <li><router-link class="link-no-style" to="/">Home</router-link></li>
-      <li><router-link class="link-no-style" to="/Hack">Hacking</router-link></li>
-      <li>Hoax</li>
-      <li>Malware</li>
-      <li>Scam</li>
+      <li><router-link class="link-no-style" to="/Hacking">Hacking</router-link></li>
+      <li><router-link class="link-no-style" to="/Hoax">Hoax</router-link></li>
+      <li><router-link class="link-no-style" to="/Malware">Malware</router-link></li>
+      <li><router-link class="link-no-style" to="/Scam">Scam</router-link></li>
     </ol>
     <div id="layer" :class="[{'layer-visible' : menuIsVisible}]" @click="toggleMenu()"></div>
   </div>
