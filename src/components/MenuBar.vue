@@ -77,11 +77,19 @@ export default {
   text-decoration: none;
   color: black;
 }
+.link-no-style:hover {
+  color: blue;
+}
+.link-no-style:active {
+  color: darkcyan;
+}
 #layer {
   visibility: hidden;
   opacity: 0;
 }
+@media (min-width:800px) {
 
+}
 @media (max-width:800px) {
   #menubar ol {
     flex-direction: column;
@@ -113,6 +121,9 @@ export default {
   }
   .link-no-style {
     color: white;
+  }
+  .link-no-style:hover {
+    color: grey;
   }
   #menubar #menu-burger {
     position: relative;
