@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Hacking from '../views/cyber-crime/Hacking.vue'
 import Hoax from '../views/cyber-crime/Hoax.vue'
-import Malware from '../views/cyber-crime/Scam.vue'
+import Malware from '../views/cyber-crime/Malware.vue'
 import Scam from '../views/cyber-crime/Scam.vue'
 
 const routes = [
