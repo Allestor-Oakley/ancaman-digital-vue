@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      name : "hacking",
+      name : "hoax",
       judul : {
         color1 : "#9933ff",
         color2 : "#bf80ff",
@@ -48,17 +48,17 @@ export default {
       contohKasus : {
         items: [
           {
-            image : "dewan-penghianat-rakyat.jpg",
+            image : "ratna-sarumpaet.jpg",
             context : "Hoax ini dulu sempat ramai di Indonesia, pada 2018, Ratna Sarumpaet ditangkap atas kasus penyebaran berita bohong atau hoax. Kala itu Ratna mengklaim bahwa dirinya telah dianiaya. Klaimnya beredar di Facebook dan kemudian dibenarkan oleh politisi. Setelah kepolisian melakukan penyelidikan, terungkaplah bahwa hal itu tidak benar. Ratna pun mengakuinya dan dia ditangkap. ",
             url : "https://nasional.tempo.co/read/1133129/begini-kronologi-kasus-hoax-ratna-sarumpaet"
           },
           {
-            image : "3-tiket-rugi-miliaran-rupiah.png",
+            image : "foto-vaksin.jpg",
             context : "Beredar kabar tentang vaksin COVID-19 yang megandung mikrocip magnetis. Hoax ini tersebar dalam bentuk video, dalam video tersebut penyebar memperlihatkan koin nikel yang menempel di tempat dimana vaksin disuntikkan. Berita ini adalah hoaks, karena jarum vaksin terlalu kecil untuk bisa dilalui oleh bahan seperti mikrocip.",
             url : "https://sehatnegeriku.kemkes.go.id/baca/berita-utama/20210528/1137831/hoax-vaksin-covid-19-mengandung-mikrocip-magnetis/"
           },
           {
-            image : "yahoo-logo.jpg",
+            image : "hoaks-vaksin.jpg",
             context : "Postingan ini berisi informasi bahwa vaksin Covid-19 akan membunuh penerimanya, postingan ini juga mengatakan bahwa sumber dari informasi ini berasal dari seorang ilmuwan yang sebelumnya bekerja dalam pembuatan vaksin tersebut.",
             url : "https://www.jawapos.com/hoax-atau-bukan/22/06/2021/hoax-vaksin-covid-19-mempercepat-kematian/"
           },
@@ -67,34 +67,34 @@ export default {
       tipsAndTrick : {
         items : [
           {
-            image : "download.jpg",
+            image : "blog-title.jpg",
             title : "Hati-hati dengan Judul Provokatif",
             context : "Berita hoax seringkali menggunakan judul sensasional yang provokatif. Oleh karena itu, apabila menjumpai berita denga judul provokatif, sebaiknya Anda mencari referensi berupa berita serupa dari situs online resmi, kemudian bandingkan isinya."
           },
           {
-            image : "link.jpg",
+            image : "situs.jpg",
             title : "Cermati Alamat Situs",
             context : "Untuk informasi yang diperoleh dari website atau mencantumkan link, cermatilah alamat URL situs dimaksud. Apabila berasal dari situs yang belum terverifikasi sebagai institusi pers resmi -misalnya menggunakan domain blog, maka informasinya bisa dibilang meragukan."
           },
           {
-            image : "usb.jpg",
+            image : "fakta.jpg",
             title : "Periksa Fakta",
             context : "Perhatikan dari mana berita berasal dan siapa sumbernya? Apakah dari institusi resmi seperti KPK atau Polri? Sebaiknya jangan cepat percaya apabila informasi berasal dari pegiat ormas, tokoh politik, atau pengamat. Perhatikan juga keberimbangan sumber berita. Jika hanya ada satu sumber, pembaca tidak bisa mendapatkan gambaran yang utuh."
           },
           {
-            image : "password.jpg",
+            image : "foto.jpg",
             title : "Cek Keaslian Foto",
             context : "Cara untuk mengecek keaslian foto bisa dengan memanfaatkan mesin pencari Google, yakni dengan melakukan drag-and-drop ke kolom pencarian Google Images. Hasil pencarian akan menyajikan gambar-gambar serupa yang terdapat di internet sehingga bisa dibandingkan."
           },
           {
-            image : "akun.jpg",
+            image : "grup.jpg",
             title : "Ikut Serta Group Anti-hoax",
             context : "Jangan memberikan nama pengguna dan password/kata sandi kepada orang lain. Simpan informasi tersebut sebagai rahasia dan jangan sampai orang lain bisa mengetahui atau menebak informasi tersebut."
           }
         ]
       },
       penanganan : {
-        image : 'programmer.svg',
+        image : 'mobile-user.svg',
         content : [
           'Berikan klarifikasi apabila terlanjur menyebar berita hoaks',
           'Cari tahu sumber berita tersebut dan catat, jangan sampai terjatuh ke lubang yang sama',
