@@ -48,7 +48,7 @@ export default {
   pointer-events: none;
 }
 .f-menu-container > div{
-	transition: transform 0.2s, opacity 0.1s;
+	transition: transform 0.2s, opacity 0.3s;
 	pointer-events : auto;
   opacity: 1;
 }
