@@ -5,7 +5,16 @@
     :title="judul.title"
     :context="judul.context">
     <div id="illustration">
-      <img src="../../assets/cyber-crime/hoax/judul/fake-news-without-bubble.png" alt="" width="430">
+      <div class="question-mark"
+        v-for="item in getQuestionMarkData()"
+        :key="item.duration"
+        :style="{top : item.top + 'px', left : item.left + 'px', animationDuration : item.duration + 's'}">
+        <img src="@/assets/cyber-crime/hoax/judul/question-mark-white.svg" alt="" width="43">
+      </div>
+      <img src="../../assets/cyber-crime/hoax/judul/fake-news-without-bubble.png" alt="" width="340">
+      <div id="bubble-text">
+        <img src="../../assets/cyber-crime/hoax/judul/fake-news-bubble.png" alt="" width="200">
+      </div>
     </div>
   </Judul>
   <ContohKasus 
@@ -35,6 +44,25 @@ export default {
     ContohKasus,
     TipsAndTrick,
     Penanganan
+  },
+  methods : {
+    getRandom(top, left) {
+      let duration = Math.round((Math.random() * 0.5 + 1.5) * 10) / 10
+      return {
+        "top" : top,
+        "left" : left,
+        "duration" : duration
+      }
+    },
+    getQuestionMarkData() {
+      let top = [60, 50, 20, 60]
+      let left = [10, 120, 240, 350]
+      let result = []
+      for (let i = 0; i < top.length;i++) [
+        result.push(this.getRandom(top[i], left[i]))
+      ]
+      return result
+    }
   },
   data() {
     return {
@@ -107,6 +135,39 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+#illustration {
+  position: relative;
+}
+#illustration > img{
+  z-index: 2;
+  position: relative;
+  top: 30px;
+}
+.question-mark {
+  position: absolute;
+  z-index: 1;
+  animation: slide-up-opacity infinite ease;
+}
+@keyframes slide-up-opacity {
+    0% {
+        opacity: 0;
+        /* bottom: 0px; */
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        /* bottom: 200px; */
+        transform: translateY(-200px);
+    }
+}
+#bubble-text {
+  position: absolute;
+  z-index: 3;
+  top: 45px;
+  left: 190px;
+}
 </style>
