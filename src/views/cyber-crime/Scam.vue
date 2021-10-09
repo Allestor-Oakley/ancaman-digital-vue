@@ -5,7 +5,13 @@
     :title="judul.title"
     :context="judul.context">
     <div id="illustration">
-      <img src="../../assets/cyber-crime/scam/judul/scam.png" alt="" width="430">
+      <img src="../../assets/cyber-crime/scam/judul/scam.png" alt="" width="375">
+      <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-up-1_animated.svg" alt="" style="top : 5px; left : 28px">
+      <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-up-2_animated.svg" alt="" style="top : -35px; left : 120px">
+      <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-up-3_animated.svg" alt="" style="top : -30px; left : 250px">
+      <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-down-1_animated.svg" alt="" style="top : 220px; left : 28px">
+      <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-down-2_animated.svg" alt="" style="top : 270px; left : 130px">
+      <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-down-3_animated.svg" alt="" style="top : 220px; left : 270px">
     </div>
   </Judul>
   <ContohKasus 
@@ -110,5 +116,18 @@ export default {
 </script>
 
 <style scoped>
-
+#illustration {
+  position: relative;
+  top: 10px;
+}
+#illustration > img:nth-child(1) {
+  z-index: 2;
+  position: relative;
+}
+.circuit {
+  position: absolute;
+  width: 76px;
+  height: 157px;
+  z-index: 1;
+}
 </style>
