@@ -45,14 +45,13 @@ export default {
     Penanganan
   },
   methods : {
-    getRandom(top, left, color) {
+    getRandom(top, left) {
       let number = "";
       for (let i = 0; i < 5; i++) {
         number += Math.round(Math.random())
       }
       let duration = Math.round((Math.random() * 0.5 + 1.5) * 10) / 10
       return {
-        "color" : color,
         "top" : top,
         "left" : left,
         "number" : number,
