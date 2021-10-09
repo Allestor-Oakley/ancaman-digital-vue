@@ -1,9 +1,5 @@
 <template>
   <MenuBar />
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div> -->
   <router-view/>
   <Footer />
 </template>
@@ -36,14 +32,7 @@ export default {
 }
 
 /* FONT */
-/*TODO : change this to just one line at the end*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&family=Titillium+Web&display=swap');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

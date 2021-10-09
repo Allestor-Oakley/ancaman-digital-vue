@@ -28,8 +28,8 @@ export default {
 
 <style scoped>
 a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+  color: inherit;
+  text-decoration: inherit;
 }
 .helpdesk-submenu {
   color: white;

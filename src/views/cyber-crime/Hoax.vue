@@ -152,7 +152,6 @@ export default {
 @keyframes slide-up-opacity {
     0% {
         opacity: 0;
-        /* bottom: 0px; */
         transform: translateY(0);
     }
     50% {
@@ -160,7 +159,6 @@ export default {
     }
     100% {
         opacity: 0;
-        /* bottom: 200px; */
         transform: translateY(-200px);
     }
 }
