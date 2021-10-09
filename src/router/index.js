@@ -4,6 +4,7 @@ import Hacking from '../views/cyber-crime/Hacking.vue'
 import Hoax from '../views/cyber-crime/Hoax.vue'
 import Malware from '../views/cyber-crime/Malware.vue'
 import Scam from '../views/cyber-crime/Scam.vue'
+import PageNotFound from '../views/PageNotFound.vue'
 
 const routes = [
   {
@@ -44,6 +45,14 @@ const routes = [
     component : Scam,
     meta : {
       title : "Scam"
+    }
+  },
+  {
+    path: "/:pathMatch(.*)*", 
+    name : "404 Not Found",
+    component: PageNotFound,
+    meta : {
+      title :  "404 Not Found"
     }
   },
   // {
