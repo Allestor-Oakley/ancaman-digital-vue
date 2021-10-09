@@ -5,6 +5,13 @@
     :title="judul.title"
     :context="judul.context">
     <div id="illustration">
+      <div 
+        class="matrix-animation"
+        v-for="item in getMatrixData()"
+        :key="item.number"
+        :style="{top : item.top + 'px', left : item.left + 'px'}">
+        <p :style="{animationDuration : item.duration + 's'}">{{item.number}}</p>
+      </div>
       <img src="../../assets/cyber-crime/hacking/judul/hacker-without-background.png" alt="" width="430">
     </div>
   </Judul>
@@ -36,6 +43,32 @@ export default {
     ContohKasus,
     TipsAndTrick,
     Penanganan
+  },
+  methods : {
+    getRandom(top, left, color) {
+      let number = "";
+      for (let i = 0; i < 5; i++) {
+        number += Math.round(Math.random())
+      }
+      let duration = Math.round((Math.random() * 0.5 + 1.5) * 10) / 10
+      return {
+        "color" : color,
+        "top" : top,
+        "left" : left,
+        "number" : number,
+        "duration" : duration
+      }
+    },
+    getMatrixData() {
+      let top = [110, 70, 10, 83, 105]
+      let left = [25, 85, 150, 248, 340]
+      let result = []
+
+      for (let i = 0;i < top.length; i++) {
+        result.push(this.getRandom(top[i], left[i]));
+      }
+      return result
+    }
   },
   data() {
     return {
@@ -127,5 +160,36 @@ export default {
 </script>
 
 <style scoped>
-
+#illustration {
+  position: relative;
+}
+#illustration img {
+  position: relative;
+  z-index: 2;
+}
+.matrix-animation {
+  overflow: hidden;
+  height: 100px;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,1)));
+  mask-image: gradient(linear,top, bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,1)));
+  font-size: 19px;
+  position: absolute;
+  z-index: 1;
+}
+.matrix-animation p {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+  animation: slidedown infinite linear;
+}
+@keyframes slidedown {
+    0%{
+      transform: translateY(-150px);
+    }
+    100%{
+      transform: translateY(100px);
+    }
+}
 </style>
