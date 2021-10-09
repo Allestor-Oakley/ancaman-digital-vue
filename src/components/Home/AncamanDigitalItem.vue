@@ -1,8 +1,12 @@
 <template>
   <div class="ancaman-digital-submenu">
-    <img :src="getImgUrl(image)" :alt="image" width="48" height="48">
-    <h5>{{ title }}</h5>
-    <p>{{ contents }}</p>
+    <router-link class="link-no-style" :to="this.url">
+    </router-link>
+    <div class="ancaman-digital-submenu-container">
+      <img :src="getImgUrl(image)" :alt="image" width="48" height="48">
+      <h5>{{ title }}</h5>
+      <p>{{contents}}</p>
+    </div>
   </div>
 </template>
 
@@ -12,7 +16,8 @@ export default {
   props : {
     title : String,
     image : String, 
-    contents : String
+    contents : String,
+    url : String
   },
   methods : {
     getImgUrl(pic) {
@@ -32,6 +37,11 @@ export default {
   align-items: center;
   flex-direction: column;
   box-shadow: 0 2px 8px 0 rgb(128 128 128);
+  position: relative;
+}
+.ancaman-digital-submenu-container {
+  width: 100%;
+  height: 100%;
   padding: 50px 32px;
 }
 .ancaman-digital-submenu img {
@@ -46,5 +56,14 @@ export default {
 .ancaman-digital-submenu p {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
+}
+.link-no-style {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
 }
 </style>

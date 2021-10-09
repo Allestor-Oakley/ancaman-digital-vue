@@ -5,7 +5,8 @@
       :key="item.title" 
       :image="item.image" 
       :title="item.title" 
-      :contents="item.content"/>
+      :contents="item.content"
+      :url="item.url"/>
   </FourItemsSection>
 
 </template>
@@ -25,22 +26,26 @@ export default {
         {
           title : "Hacking",
           image : "hacker.svg",
-          content : "Peretasan atau pencurian data"
+          content : "Peretasan atau pencurian data", 
+          url : "/Hacking"
         },
         {
           title : "Hoax",
           image : "fake-news.svg",
-          content : "Berita palsu atau bohong"
+          content : "Berita palsu atau bohong",
+          url : "/Hoax"
         },
         {
           title : "Malware",
           image : "virus-scan.svg",
-          content : "Perangkat lunak berbahaya"
+          content : "Perangkat lunak berbahaya",
+          url : "/Malware"
         },
         {
           title : "Scam",
           image : "scam.svg",
-          content : "Penipuan dan \n phishing"
+          content : "Penipuan dan \n phishing",
+          url : "/Scam"
         }
       ]
     }
