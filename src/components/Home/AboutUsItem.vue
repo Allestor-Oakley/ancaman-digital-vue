@@ -61,7 +61,7 @@ export default {
 .about-us-item h2 {
   font-family: 'Roboto Condensed',sans-serif;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 30px;
   margin-top: 30px;
 }
 .about-us-item p {
