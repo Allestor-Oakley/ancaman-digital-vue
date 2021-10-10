@@ -1,4 +1,3 @@
-
 // thanks:
 // https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671 
 
@@ -34,11 +33,9 @@ export default function scrollEvent(){
   const showBackToTop = () => {
     if (window.scrollY >= 98) {
       backToTop.classList.add("visible-to-top")
-      console.log("View")
     }
     else {
       backToTop.classList.remove("visible-to-top")
-      console.log("No View")
     }
   }
   const handleScrollAnimation = () =>{
