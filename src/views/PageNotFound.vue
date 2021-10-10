@@ -1,5 +1,5 @@
 <template>
-  <section id="home">
+  <section id="home" class="top-section">
     <h1>404</h1>
     <p>Page Not Found</p>
   </section>

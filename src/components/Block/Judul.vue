@@ -1,5 +1,5 @@
 <template>
-  <section id="title" :style="{background: 'linear-gradient(' + color1 + ',' + color2 + ')'}">
+  <section id="title" :style="{background: 'linear-gradient(' + color1 + ',' + color2 + ')'}" class="top-section">
     <div id="title-context">
       <h1>{{title}}</h1>
       <p>{{context}}</p>

@@ -61,12 +61,7 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior() {
-    if (document.getElementById("home")){ 
-      document.getElementById("home").scrollIntoView() 
-    }
-    else {
-      document.getElementById("title").scrollIntoView()
-    }
+    document.getElementsByClassName("top-section").scrollIntoView()
   }
 })
 

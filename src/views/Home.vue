@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <div id="home" class="top-section">
     <h1>Ancaman Digital</h1>
     <p>Ancaman terhadap informasi sensitif pada sistem komputer atau jaringan internet. </p>
   </div>
