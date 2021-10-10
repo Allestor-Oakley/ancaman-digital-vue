@@ -1,9 +1,9 @@
 <template>
   <MenuBar />
-  <router-view/>
   <div id="to-top" class="not-visible-to-top" @click="goToTop()">
     <img src="./assets/button/back-to-top.svg" alt="">
   </div>
+  <router-view/>
   <Footer />
 </template>
 
@@ -60,6 +60,7 @@ export default {
   border-radius: 50%;
   transition: opacity 600ms ease, visibility 600ms ease;
   cursor: pointer;
+  z-index: 5;
 }
 #to-top img {
   padding: 20%;
