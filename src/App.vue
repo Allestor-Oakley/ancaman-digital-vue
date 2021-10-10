@@ -1,6 +1,9 @@
 <template>
   <MenuBar />
   <router-view/>
+  <div id="to-top" class="not-visible-to-top" @click="goToTop()">
+    <img src="./assets/button/back-to-top.svg" alt="">
+  </div>
   <Footer />
 </template>
 
@@ -12,6 +15,13 @@ export default {
   components : {
     MenuBar,
     Footer
+  },
+  methods : {
+    goToTop() {
+      document.getElementsByClassName("top-section")[0].scrollIntoView({
+        behavior : "smooth"
+      })
+    }
   },
   watch: {
         $route: {
@@ -39,6 +49,31 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+#to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  height: 64px;
+  width: 64px;
+  background-color: #333333;
+  border-radius: 50%;
+  transition: opacity 600ms ease, visibility 600ms ease;
+  cursor: pointer;
+}
+#to-top img {
+  padding: 20%;
+  width: 100%;
+  height: 100%;
+}
+
+.not-visible-to-top {
+  opacity: 0;
+  visibility: hidden;
+}
+.visible-to-top {
+  opacity: 0.7;
+  visibility: visible;
 }
 
 /* GLOBAL CLASS */
@@ -110,6 +145,4 @@ export default {
 p {
   line-height: 1.6;
 }
-/* TODO : responsive grid */
-
 </style>
