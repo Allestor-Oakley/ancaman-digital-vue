@@ -1,6 +1,6 @@
 <template>
   <MenuBar />
-  <div id="to-top" class="not-visible-to-top" @click="goToTop()">
+  <div id="to-top" @click="goToTop()">
     <img src="./assets/button/back-to-top.svg" alt="">
   </div>
   <router-view/>
@@ -61,6 +61,8 @@ export default {
   transition: opacity 600ms ease, visibility 600ms ease;
   cursor: pointer;
   z-index: 5;
+  opacity: 0;
+  visibility: hidden;
 }
 #to-top img {
   padding: 20%;
@@ -68,11 +70,7 @@ export default {
   height: 100%;
 }
 
-.not-visible-to-top {
-  opacity: 0;
-  visibility: hidden;
-}
-.visible-to-top {
+#to-top.visible-to-top {
   opacity: 0.7;
   visibility: visible;
 }

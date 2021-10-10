@@ -33,12 +33,10 @@ export default function scrollEvent(){
   const backToTop = document.getElementById("to-top")
   const showBackToTop = () => {
     if (window.scrollY >= 98) {
-      backToTop.classList.remove("not-visible-to-top")
       backToTop.classList.add("visible-to-top")
       console.log("View")
     }
     else {
-      backToTop.classList.add("not-visible-to-top")
       backToTop.classList.remove("visible-to-top")
       console.log("No View")
     }
