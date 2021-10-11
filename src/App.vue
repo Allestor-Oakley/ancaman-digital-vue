@@ -63,6 +63,7 @@ export default {
   z-index: 5;
   opacity: 0;
   visibility: hidden;
+  box-shadow: rgb(51 51 51) 2px 2px 8px 0px;
 }
 #to-top img {
   padding: 20%;
