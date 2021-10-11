@@ -6,7 +6,7 @@
     :context="judul.context">
     <div id="illustration">
       <img src="../../assets/cyber-crime/scam/judul/scam.png" alt="" width="375">
-      <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-up-1_animated.svg" alt="" style="top : 5px; left : 28px">
+      <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-up-1_animated.svg" alt="" style="top : -1px; left : 28px">
       <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-up-2_animated.svg" alt="" style="top : -35px; left : 120px">
       <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-up-3_animated.svg" alt="" style="top : -30px; left : 250px">
       <img class="circuit" src="../../assets/cyber-crime/scam/judul/circuit-down-1_animated.svg" alt="" style="top : 220px; left : 28px">
@@ -115,7 +115,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #illustration {
   position: relative;
   top: 10px;
@@ -129,5 +129,8 @@ export default {
   width: 76px;
   height: 157px;
   z-index: 1;
+}
+#contoh-kasus-menu .contoh-kasus-item:nth-child(2) img {
+  object-position: 0% 50%;
 }
 </style>
