@@ -1,14 +1,13 @@
 <template>
   <footer>
-    <p> © Copyright 2021 YuRa Group. All Rights Reserved </p>
+    <p>© Copyright 2021 YuRa Group. All Rights Reserved</p>
   </footer>
 </template>
 
 <script>
-/* import scrollEvent from '../scrollEvent.js' */
 export default {
-  name : "Footer",
-}
+  name: "Footer",
+};
 </script>
 
 <style scoped>
@@ -21,7 +20,7 @@ footer {
   align-items: center;
 }
 footer p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
 }
 </style>

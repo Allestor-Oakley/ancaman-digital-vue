@@ -1,26 +1,23 @@
 <template>
   <section id="tips-and-trick">
     <h1>Tips and Trick</h1>
-      <TipsAndTrickCarousel 
-        :imageFolder="imageFolder"
-        :items="items"
-      />
+    <TipsAndTrickCarousel :imageFolder="imageFolder" :items="items" />
   </section>
 </template>
 
 <script>
-import TipsAndTrickCarousel from './TipsAndTrickCarousel.vue'
+import TipsAndTrickCarousel from "./TipsAndTrickCarousel.vue";
 
 export default {
-  name : "TipsAndTrick",
-  components : {
-    TipsAndTrickCarousel
+  name: "TipsAndTrick",
+  components: {
+    TipsAndTrickCarousel,
   },
-  props : {
-    imageFolder : String,
-    items : Array
-  }
-}
+  props: {
+    imageFolder: String,
+    items: Array,
+  },
+};
 </script>
 
 <style scoped>
@@ -37,15 +34,15 @@ export default {
 }
 #tips-and-trick h1 {
   font-size: 48px;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: normal;
   position: relative;
   bottom: 30px;
 }
 
-@media (max-width : 545px) {
+@media (max-width: 545px) {
   #tips-and-trick {
-    height : 850px;
+    height: 850px;
   }
 }
 </style>

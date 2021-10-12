@@ -1,21 +1,20 @@
 <template>
-  <section class="fm-sec" :style="{backgroundColor : background}">
-    <h1 :style="{color : titleColor}">{{title}}</h1>
+  <section class="fm-sec" :style="{ backgroundColor: background }">
+    <h1 :style="{ color: titleColor }">{{ title }}</h1>
     <div class="f-menu-container scroll-reveal fade-in">
       <slot></slot>
     </div>
   </section>
-  
 </template>
 
 <script>
-import scrollEvent from '../../scrollEvent.js'
+import scrollEvent from "../../scrollEvent.js";
 export default {
-  name : "ForItemsSection",
-  props : {
-    title : String,
-    background : String,
-    titleColor : String
+  name: "ForItemsSection",
+  props: {
+    title: String,
+    background: String,
+    titleColor: String,
   },
   mounted() {
     let throttleTimer = false;
@@ -28,23 +27,27 @@ export default {
       throttleTimer = true;
 
       setTimeout(() => {
-        //call the callback function in the setTimeout and set the throttle timer to false after the indicated time has passed 
+        //call the callback function in the setTimeout and set the throttle timer to false after the indicated time has passed
         callback();
         throttleTimer = false;
       }, time);
-    }
-    const {scrollElements, handleScrollAnimation, showBackToTop} = scrollEvent()
-    
-    window.addEventListener('scroll', () => {
+    };
+    const {
+      scrollElements,
+      handleScrollAnimation,
+      showBackToTop,
+    } = scrollEvent();
+
+    window.addEventListener("scroll", () => {
       throttle(() => {
         if (scrollElements.length > 0) {
-          handleScrollAnimation()
+          handleScrollAnimation();
         }
-        showBackToTop()
-      }, 250)
+        showBackToTop();
+      }, 250);
     });
-  }
-}
+  },
+};
 </script>
 
 <style>
@@ -60,7 +63,7 @@ export default {
   position: relative;
 }
 .fm-sec h1 {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-size: 3rem;
   font-weight: normal;
   color: black;
@@ -75,19 +78,19 @@ export default {
   top: 50px;
   pointer-events: none;
 }
-.f-menu-container > div{
-	transition: transform 0.2s, opacity 0.3s;
-	pointer-events : auto;
+.f-menu-container > div {
+  transition: transform 0.2s, opacity 0.3s;
+  pointer-events: auto;
   opacity: 1;
 }
-.f-menu-container:hover > div:not(:hover)  {
+.f-menu-container:hover > div:not(:hover) {
   opacity: 0.5;
 }
 .f-menu-container:hover > .ancaman-digital-submenu:hover {
   transform: scale(1.13);
 }
 
-@media (max-width : 1155px) {
+@media (max-width: 1155px) {
   .f-menu-container {
     width: 960px;
   }
@@ -95,7 +98,7 @@ export default {
     font-size: 2.5rem;
   }
 }
-@media (max-width : 975px) {
+@media (max-width: 975px) {
   .f-menu-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -116,12 +119,12 @@ export default {
     font-size: 2.25rem;
   }
 }
-@media (max-height : 600px){
+@media (max-height: 600px) {
   .fm-sec {
     justify-content: flex-start;
     height: 110vh;
   }
-  .fm-sec h1{
+  .fm-sec h1 {
     margin: 30px 0;
   }
 }

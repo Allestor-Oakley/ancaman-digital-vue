@@ -1,7 +1,7 @@
 <template>
   <div class="helpdesk-submenu">
     <a :href="`${link}`" target="_blank">
-      <img :src="getImgUrl(image)" :alt="image" width="107">
+      <img :src="getImgUrl(image)" :alt="image" width="107" />
       <h4>{{ title }}</h4>
       <p>{{ contents }}</p>
     </a>
@@ -10,20 +10,20 @@
 
 <script>
 export default {
-  name : "HelpDeskItem",
-  props : {
-    image : String,
-    title : String,
-    contents : String,
-    link : String
+  name: "HelpDeskItem",
+  props: {
+    image: String,
+    title: String,
+    contents: String,
+    link: String,
   },
-  methods : {
+  methods: {
     getImgUrl(pic) {
-      '../../assets/home/helpdesk/'
-      return require("@/assets/home/helpdesk/" + pic)
-    }
+      "../../assets/home/helpdesk/";
+      return require("@/assets/home/helpdesk/" + pic);
+    },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -44,17 +44,17 @@ a {
   border-radius: 50%;
 }
 .helpdesk-submenu h4 {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   font-weight: normal;
   font-size: 24px;
   margin: 11px 0;
 }
 .helpdesk-submenu p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 11px 0;
   line-height: 1.6;
 }
-@media (max-width : 757px) {
+@media (max-width: 757px) {
   .helpdesk-submenu h4 {
     font-size: 22px;
   }

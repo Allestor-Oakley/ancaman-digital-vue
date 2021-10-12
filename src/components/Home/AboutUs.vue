@@ -2,7 +2,7 @@
   <section id="about-us">
     <h1>About us</h1>
     <div id="about-us-container">
-      <AboutUsItem 
+      <AboutUsItem
         v-for="person in persons"
         :key="person.name"
         :name="person.name"
@@ -17,43 +17,43 @@
 </template>
 
 <script>
-import AboutUsItem from './AboutUsItem.vue'
+import AboutUsItem from "./AboutUsItem.vue";
 
 export default {
-  name : "AboutUs",
-  components : {
-    AboutUsItem
+  name: "AboutUs",
+  components: {
+    AboutUsItem,
   },
   data() {
     return {
-      persons : [
+      persons: [
         {
-          name : "M. Rafi Ramadhan",
-          image : "rafi-kontingen.jpg",
-          contents : "Nama saya Rafi, hobi saya menulis dan menggambar. Saya bekerja di tim ini sebagai konten kreator.",
-          ypos : "19.94",
-          whatsapp : "https://wa.me/6281322524858",
-          instagram : "https://www.instagram.com/mrafirmdhn_/"
+          name: "M. Rafi Ramadhan",
+          image: "rafi-kontingen.jpg",
+          contents:
+            "Nama saya Rafi, hobi saya menulis dan menggambar. Saya bekerja di tim ini sebagai konten kreator.",
+          ypos: "19.94",
+          whatsapp: "https://wa.me/6281322524858",
+          instagram: "https://www.instagram.com/mrafirmdhn_/",
         },
         {
-          name : "Yusuf Rahman P.",
-          image : "foto-pramuka-yusuf.png",
-          contents : "Halo, nama saya Yusuf, saya suka membaca dan coding. Saya bekerja sebagai web desainer di tim ini.",
-          ypos : "34.62",
-          whatsapp : "https://wa.me/6281380035179",
-          instagram : "https://www.instagram.com/y.rahman.p/"
+          name: "Yusuf Rahman P.",
+          image: "foto-pramuka-yusuf.png",
+          contents:
+            "Halo, nama saya Yusuf, saya suka membaca dan coding. Saya bekerja sebagai web desainer di tim ini.",
+          ypos: "34.62",
+          whatsapp: "https://wa.me/6281380035179",
+          instagram: "https://www.instagram.com/y.rahman.p/",
         },
-      ]
-    }
+      ],
+    };
   },
-  mounted() {
-
-  }
-}
+  mounted() {},
+};
 </script>
 
 <style>
-#about-us{
+#about-us {
   width: 100%;
   height: 100vh;
   background-color: #f6f7fb;
@@ -63,7 +63,7 @@ export default {
   align-items: center;
 }
 #about-us h1 {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: normal;
   color: black;
   font-size: 48px;
@@ -78,7 +78,7 @@ export default {
   bottom: 40px;
 }
 
-@media (max-width : 825px) {
+@media (max-width: 825px) {
   #about-us {
     height: 120vh;
   }
@@ -88,30 +88,30 @@ export default {
     bottom: 10px;
     width: 450px;
   }
-  #about-us h1{
+  #about-us h1 {
     font-size: 2.5rem;
   }
 }
 
-@media (max-width : 600px){
+@media (max-width: 600px) {
   #about-us-container {
     width: 320px;
   }
-  #about-us-container div{
+  #about-us-container div {
     padding: 0 10px;
   }
-  #about-us h1{
+  #about-us h1 {
     font-size: 2.25rem;
   }
-  #about-us-container div h2{
+  #about-us-container div h2 {
     font-size: 1.75rem;
   }
-  #about-us-container div p{
+  #about-us-container div p {
     font-size: 0.9rem;
   }
 }
 
-@media (max-width : 400px) {
+@media (max-width: 400px) {
   #about-us {
     height: 1100px;
   }

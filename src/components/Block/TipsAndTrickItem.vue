@@ -1,21 +1,29 @@
 <template>
   <div class="tat-item">
-    <img :src="require('@/assets/cyber-crime/' + imageFolder + '/tips-and-trick/' + image)" alt="">
-    <h3>{{title}}</h3>
-    <p>{{context}}</p>
+    <img
+      :src="
+        require('@/assets/cyber-crime/' +
+          imageFolder +
+          '/tips-and-trick/' +
+          image)
+      "
+      alt=""
+    />
+    <h3>{{ title }}</h3>
+    <p>{{ context }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name : "TipsAndTrickItem",
-  props : {
-    image : String,
-    imageFolder : String,
-    title : String,
-    context : String
+  name: "TipsAndTrickItem",
+  props: {
+    image: String,
+    imageFolder: String,
+    title: String,
+    context: String,
   },
-}
+};
 </script>
 
 <style scoped>
@@ -29,7 +37,7 @@ export default {
   grid-gap: 0 50px;
   text-align: left;
 }
-.tat-item img{
+.tat-item img {
   width: 467px;
   object-fit: contain;
   grid-row: 1/3;
@@ -37,15 +45,15 @@ export default {
   padding: 0 auto;
   margin: 0 auto;
 }
-.tat-item h3{
+.tat-item h3 {
   grid-column: 2;
   align-self: center;
   font-size: 30px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
 }
 .tat-item p {
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 </style>

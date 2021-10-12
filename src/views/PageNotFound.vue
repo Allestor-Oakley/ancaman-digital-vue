@@ -7,8 +7,8 @@
 
 <script>
 export default {
-  name : "PageNotFound"
-}
+  name: "PageNotFound",
+};
 </script>
 
 <style scoped>
@@ -20,13 +20,13 @@ export default {
   align-items: center;
   flex-direction: column;
 }
-#home h1{
+#home h1 {
   font-size: 64px;
   font-weight: normal;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
-#home p{
+#home p {
   font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 </style>

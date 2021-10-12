@@ -1,8 +1,12 @@
 <template>
-  <section id="title" :style="{background: 'linear-gradient(' + color1 + ',' + color2 + ')'}" class="top-section">
+  <section
+    id="title"
+    :style="{ background: 'linear-gradient(' + color1 + ',' + color2 + ')' }"
+    class="top-section"
+  >
     <div id="title-context">
-      <h1>{{title}}</h1>
-      <p>{{context}}</p>
+      <h1>{{ title }}</h1>
+      <p>{{ context }}</p>
     </div>
     <slot></slot>
   </section>
@@ -10,13 +14,13 @@
 
 <script>
 export default {
-  props : {
-    color1 : String,
-    color2 : String,
-    title : String,
-    context : String
+  props: {
+    color1: String,
+    color2: String,
+    title: String,
+    context: String,
   },
-}
+};
 </script>
 
 <style>
@@ -26,7 +30,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color : white;
+  color: white;
   padding: 0 15vh;
 }
 #title-context {
@@ -38,7 +42,7 @@ export default {
   top: 15px;
 }
 #title-context h1 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-size: 72px;
   font-weight: normal;
   text-align: left;
@@ -46,14 +50,14 @@ export default {
 }
 #title-context p {
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   width: 70%;
   text-align: left;
   margin-top: 40px;
   line-height: 1.6;
 }
 
-@media (max-width : 1060px) {
+@media (max-width: 1060px) {
   #title {
     flex-direction: column-reverse;
     justify-content: center;
@@ -61,18 +65,18 @@ export default {
   #title-context {
     height: 25%;
   }
-  #title-context h1{
+  #title-context h1 {
     margin-top: 75px;
     text-align: center;
     font-size: 3.75rem;
   }
-  #title-context p{
+  #title-context p {
     text-align: center;
     width: 450px;
   }
 }
 
-@media (max-width : 500px) {
+@media (max-width: 500px) {
   #title {
     padding: 0 4vw;
   }
@@ -83,11 +87,11 @@ export default {
     top: 0;
     width: 100%;
   }
-  #title-context h1{
+  #title-context h1 {
     font-size: 3.25rem;
     width: 100%;
   }
-  #title-context p{
+  #title-context p {
     font-size: 1.1rem;
     width: 100%;
   }

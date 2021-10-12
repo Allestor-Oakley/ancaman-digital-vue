@@ -1,30 +1,29 @@
 <template>
   <div class="ancaman-digital-submenu">
-    <router-link class="link-no-style" :to="this.url">
-    </router-link>
+    <router-link class="link-no-style" :to="this.url"> </router-link>
     <div class="ancaman-digital-submenu-container">
-      <img :src="getImgUrl(image)" :alt="image" width="48" height="48">
+      <img :src="getImgUrl(image)" :alt="image" width="48" height="48" />
       <h5>{{ title }}</h5>
-      <p>{{contents}}</p>
+      <p>{{ contents }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name : 'AncamanDigitalItem',
-  props : {
-    title : String,
-    image : String, 
-    contents : String,
-    url : String
+  name: "AncamanDigitalItem",
+  props: {
+    title: String,
+    image: String,
+    contents: String,
+    url: String,
   },
-  methods : {
+  methods: {
     getImgUrl(pic) {
-      return require("@/assets/home/cybercrime-icon/" + pic)
-    }
-  }
-}
+      return require("@/assets/home/cybercrime-icon/" + pic);
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -48,13 +47,13 @@ export default {
   position: relative;
   bottom: 10px;
 }
-.ancaman-digital-submenu h5{
-  font-family: 'Roboto', sans-serif;
+.ancaman-digital-submenu h5 {
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: normal;
 }
 .ancaman-digital-submenu p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
 }
 .link-no-style {

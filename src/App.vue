@@ -1,37 +1,37 @@
 <template>
   <MenuBar />
   <div id="to-top" @click="goToTop()">
-    <img src="./assets/button/back-to-top.svg" alt="">
+    <img src="./assets/button/back-to-top.svg" alt="" />
   </div>
-  <router-view/>
+  <router-view />
   <Footer />
 </template>
 
 <script>
-import MenuBar from "./components/MenuBar.vue"
-import Footer from './components/FooterCopyright.vue'
+import MenuBar from "./components/MenuBar.vue";
+import Footer from "./components/FooterCopyright.vue";
 export default {
-  name : "App",
-  components : {
+  name: "App",
+  components: {
     MenuBar,
-    Footer
+    Footer,
   },
-  methods : {
+  methods: {
     goToTop() {
       document.getElementsByClassName("top-section")[0].scrollIntoView({
-        behavior : "smooth"
-      })
-    }
+        behavior: "smooth",
+      });
+    },
   },
   watch: {
-        $route: {
-          immediate: true,
-          handler(to) {
-            document.title = to.meta.title || 'Ancaman Digital';
-          }
-        },
-    }
-}
+    $route: {
+      immediate: true,
+      handler(to) {
+        document.title = to.meta.title || "Ancaman Digital";
+      },
+    },
+  },
+};
 </script>
 
 <style>
@@ -42,7 +42,7 @@ export default {
 }
 
 /* FONT */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&family=Titillium+Web&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&family=Titillium+Web&display=swap");
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

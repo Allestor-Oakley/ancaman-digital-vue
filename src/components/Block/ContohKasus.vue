@@ -2,7 +2,7 @@
   <section id="contoh-kasus">
     <h1>Contoh Kasus</h1>
     <div id="contoh-kasus-menu">
-      <ContohKasusItem 
+      <ContohKasusItem
         :imageFolder="imageFolder"
         v-for="item in items"
         :key="item.image"
@@ -15,17 +15,17 @@
 </template>
 
 <script>
-import ContohKasusItem from '../Block/ContohKasusItem.vue'
+import ContohKasusItem from "../Block/ContohKasusItem.vue";
 
 export default {
-  components : {
-    ContohKasusItem
+  components: {
+    ContohKasusItem,
   },
-  props : {
-    items : Array,
-    imageFolder : String
+  props: {
+    items: Array,
+    imageFolder: String,
   },
-}
+};
 </script>
 
 <style scoped>
@@ -38,8 +38,8 @@ export default {
   align-items: center;
   padding-bottom: 100px;
 }
-#contoh-kasus h1{
-  font-family: 'Titillium Web', sans-serif;
+#contoh-kasus h1 {
+  font-family: "Titillium Web", sans-serif;
   font-size: 48px;
   font-weight: normal;
   color: black;
@@ -52,7 +52,7 @@ export default {
   grid-gap: 17px;
 }
 
-@media (max-width : 1200px) {
+@media (max-width: 1200px) {
   #contoh-kasus {
     justify-content: flex-start;
     margin-top: 50px;
@@ -66,17 +66,17 @@ export default {
     margin-top: 80px;
   }
 }
-@media (max-width : 900px) {
+@media (max-width: 900px) {
   #contoh-kasus-menu {
     width: 640px;
     height: 600px;
   }
 }
-@media (max-width : 680px) {
+@media (max-width: 680px) {
   #contoh-kasus {
     height: 1400px;
   }
-  #contoh-kasus h1{
+  #contoh-kasus h1 {
     font-size: 2.25rem;
   }
   #contoh-kasus-menu {
@@ -86,7 +86,7 @@ export default {
     height: 1200px;
   }
 }
-@media (max-width : 440px) {
+@media (max-width: 440px) {
   #contoh-kasus {
     height: 900px;
   }

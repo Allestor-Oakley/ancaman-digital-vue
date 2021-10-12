@@ -1,46 +1,59 @@
 <template>
   <div id="menubar">
-    <!-- <img src="../assets/home/menubar/burger-menu.svg" alt="" @click="menuIsVisible = !menuIsVisible"> -->
-    <div id="menu-burger" @click="toggleMenu()" :class="[{'menu-clicked' : menuIsVisible}]">
-      <svg width="28" height="28" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg">
+    <div
+      id="menu-burger"
+      @click="toggleMenu()"
+      :class="[{ 'menu-clicked': menuIsVisible }]"
+    >
+      <svg width="28" height="28" version="1.1" viewBox="0 0 31.75 31.75" xmlns="http://www.w3.org/2000/svg" >
         <g stroke="#000" stroke-linecap="round" stroke-width=".66743">
-        <rect x="1.9255" y="2.7192" width="27.899" height="2.499" ry="1.2495"/>
-        <rect x="1.9255" y="14.626" width="27.899" height="2.499" ry="1.2495"/>
-        <rect x="1.9255" y="26.532" width="27.899" height="2.499" ry="1.2495"/>
+          <rect x="1.9255" y="2.7192" width="27.899" height="2.499" ry="1.2495" />
+          <rect x="1.9255" y="14.626" width="27.899" height="2.499" ry="1.2495" />
+          <rect x="1.9255" y="26.532" width="27.899" height="2.499" ry="1.2495" />
         </g>
       </svg>
     </div>
-    <ol :class="[{'menu-visible' : menuIsVisible}]">
+    <ol :class="[{ 'menu-visible': menuIsVisible }]">
       <li><router-link class="link-no-style" to="/">Home</router-link></li>
-      <li><router-link class="link-no-style" to="/Hacking">Hacking</router-link></li>
+      <li>
+        <router-link class="link-no-style" to="/Hacking">Hacking</router-link>
+      </li>
       <li><router-link class="link-no-style" to="/Hoax">Hoax</router-link></li>
-      <li><router-link class="link-no-style" to="/Malware">Malware</router-link></li>
+      <li>
+        <router-link class="link-no-style" to="/Malware">Malware</router-link>
+      </li>
       <li><router-link class="link-no-style" to="/Scam">Scam</router-link></li>
     </ol>
-    <div id="layer" :class="[{'layer-visible' : menuIsVisible}]" @click="toggleMenu()"></div>
+    <div
+      id="layer"
+      :class="[{ 'layer-visible': menuIsVisible }]"
+      @click="toggleMenu()"
+    ></div>
   </div>
 </template>
 
 <script>
 export default {
-  name : "MenuBar",
+  name: "MenuBar",
   data() {
     return {
-      menuIsVisible : false
-    }
+      menuIsVisible: false,
+    };
   },
-  methods : {
+  methods: {
     toggleMenu() {
       this.menuIsVisible = !this.menuIsVisible;
-      document.documentElement.style.overflow = this.menuIsVisible ? "hidden" : "visible";
-    }
-  }
-}
+      document.documentElement.style.overflow = this.menuIsVisible
+        ? "hidden"
+        : "visible";
+    },
+  },
+};
 </script>
 
 <style scoped>
 #menubar {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   position: fixed;
   max-width: 100%;
   width: 100vw;
@@ -52,12 +65,12 @@ export default {
   display: flex;
   justify-content: center;
 }
-#menubar #menu-burger{
+#menubar #menu-burger {
   display: none;
   width: 24px;
   height: 24px;
 }
-#menubar ol{
+#menubar ol {
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -87,10 +100,9 @@ export default {
   visibility: hidden;
   opacity: 0;
 }
-@media (min-width:800px) {
-
+@media (min-width: 800px) {
 }
-@media (max-width:800px) {
+@media (max-width: 800px) {
   #menubar ol {
     flex-direction: column;
     justify-content: flex-start;
@@ -142,17 +154,18 @@ export default {
     transition: stroke 600ms ease, fill 600ms ease;
   }
   #menubar #menu-burger svg rect {
-    transition: transform 600ms ease, transform-origin 600ms ease, opacity 600ms ease;
+    transition: transform 600ms ease, transform-origin 600ms ease,
+      opacity 600ms ease;
   }
 }
 
-@media (max-height :  700px) {
+@media (max-height: 700px) {
   #menubar {
     height: 65px;
   }
 }
 
-#menubar .menu-visible{
+#menubar .menu-visible {
   left: 0;
 }
 #menubar .layer-visible {
@@ -163,7 +176,7 @@ export default {
 .menu-clicked {
   transform: translateX(-5vh);
 }
-.menu-clicked > svg g{
+.menu-clicked > svg g {
   stroke: #ffffff;
   fill: #ffffff;
 }

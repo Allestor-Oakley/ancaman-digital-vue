@@ -1,9 +1,9 @@
 <template>
   <div class="contoh-kasus-item">
     <a :href="`${url}`" target="_blank">
-      <img :src="getImageUrl()" alt="">
+      <img :src="getImageUrl()" alt="" />
       <div class="hidden-text">
-        <p>{{context}}</p>
+        <p>{{ context }}</p>
       </div>
     </a>
   </div>
@@ -11,21 +11,20 @@
 
 <script>
 export default {
-  name : "ContohKasusItem",
-  props : {
-    imageFolder : String,
-    image : String,
-    context : String,
-    url : String
+  name: "ContohKasusItem",
+  props: {
+    imageFolder: String,
+    image: String,
+    context: String,
+    url: String,
   },
-  methods : {
+  methods: {
     getImageUrl() {
-      return require(`@/assets/cyber-crime/${this.imageFolder}/contoh-kasus/${this.image}`)
-    }
-  }
-}
+      return require(`@/assets/cyber-crime/${this.imageFolder}/contoh-kasus/${this.image}`);
+    },
+  },
+};
 </script>
-
 
 <style scoped>
 .contoh-kasus-item {
@@ -39,7 +38,7 @@ export default {
   width: 100%;
   object-fit: cover;
 }
-.contoh-kasus-item .hidden-text{
+.contoh-kasus-item .hidden-text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +48,11 @@ export default {
   position: absolute;
   left: -100%;
   top: 0;
-  background-image: linear-gradient(0deg, rgba(64,64,64,0.8), rgba(64,64,64,0.8));
+  background-image: linear-gradient(
+    0deg,
+    rgba(64, 64, 64, 0.8),
+    rgba(64, 64, 64, 0.8)
+  );
   color: white;
   padding: 0 20px;
   transition: transform 500ms ease;
@@ -58,7 +61,7 @@ export default {
   transform: translateX(100%);
 }
 .contoh-kasus-item p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
 }
 </style>
