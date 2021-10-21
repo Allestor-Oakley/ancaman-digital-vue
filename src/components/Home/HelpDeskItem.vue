@@ -2,7 +2,7 @@
   <div class="helpdesk-submenu">
     <a :href="`${link}`" target="_blank">
       <img :src="getImgUrl(image)" :alt="image" width="107" />
-      <h4>{{ title }}</h4>
+      <h2>{{ title }}</h2>
       <p>{{ contents }}</p>
     </a>
   </div>
@@ -43,7 +43,7 @@ a {
 .helpdesk-submenu img {
   border-radius: 50%;
 }
-.helpdesk-submenu h4 {
+.helpdesk-submenu h2 {
   font-family: "Roboto Slab", sans-serif;
   font-weight: normal;
   font-size: 24px;
@@ -55,7 +55,7 @@ a {
   line-height: 1.6;
 }
 @media (max-width: 757px) {
-  .helpdesk-submenu h4 {
+  .helpdesk-submenu h2 {
     font-size: 22px;
   }
   .helpdesk-submenu p {
