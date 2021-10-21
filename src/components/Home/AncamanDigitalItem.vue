@@ -3,7 +3,7 @@
     <router-link class="link-no-style" :to="this.url"> </router-link>
     <div class="ancaman-digital-submenu-container">
       <img :src="getImgUrl(image)" :alt="image" width="48" height="48" />
-      <h5>{{ title }}</h5>
+      <h4>{{ title }}</h4>
       <p>{{ contents }}</p>
     </div>
   </div>
@@ -47,7 +47,7 @@ export default {
   position: relative;
   bottom: 10px;
 }
-.ancaman-digital-submenu h5 {
+.ancaman-digital-submenu h4 {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: normal;
