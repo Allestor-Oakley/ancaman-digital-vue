@@ -47,25 +47,35 @@ export default {
           instagram: "https://www.instagram.com/y.rahman.p/",
         },
       ],
+      throttleTimer : false,
+      scrollEvent : scrollEvent()
     };
   },
-  mounted() {
-    const {
-      scrollElements,
-      handleScrollAnimation,
-      showBackToTop,
-      throttle
-    } = scrollEvent();
-
-    window.addEventListener("scroll", () => {
-      throttle(() => {
-        if (scrollElements.length > 0) {
-          handleScrollAnimation();
-        }
-        showBackToTop();
+  methods : {
+    throttle(callback, time) {
+      if (this.throttleTimer) {
+        return;
+      }
+      this.throttleTimer = true;
+      setTimeout(() => {
+        callback();
+        this.throttleTimer = false;
+      }, time);
+    },
+    scrollHandler() {
+      this.throttle(() => {
+        this.scrollEvent.handleScrollAnimation();
+        console.log("test")
+        this.scrollEvent.showBackToTop();
       }, 250);
-    });
+    }
   },
+  mounted() {
+    window.addEventListener("scroll", this.scrollHandler)
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.scrollHandler)
+  }
 };
 </script>
 
