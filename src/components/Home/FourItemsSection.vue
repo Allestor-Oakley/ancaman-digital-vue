@@ -8,30 +8,12 @@
 </template>
 
 <script>
-import scrollEvent from "../../scrollEvent.js";
 export default {
   name: "ForItemsSection",
   props: {
     title: String,
     background: String,
     titleColor: String,
-  },
-  mounted() {
-    const {
-      scrollElements,
-      handleScrollAnimation,
-      showBackToTop,
-      throttle
-    } = scrollEvent();
-
-    window.addEventListener("scroll", () => {
-      throttle(() => {
-        if (scrollElements.length > 0) {
-          handleScrollAnimation();
-        }
-        showBackToTop();
-      }, 250);
-    });
   },
 };
 </script>

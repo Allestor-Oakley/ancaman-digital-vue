@@ -18,6 +18,7 @@
 
 <script>
 import AboutUsItem from "./AboutUsItem.vue";
+import scrollEvent from "../../scrollEvent.js";
 
 export default {
   name: "AboutUs",
@@ -48,7 +49,23 @@ export default {
       ],
     };
   },
-  mounted() {},
+  mounted() {
+    const {
+      scrollElements,
+      handleScrollAnimation,
+      showBackToTop,
+      throttle
+    } = scrollEvent();
+
+    window.addEventListener("scroll", () => {
+      throttle(() => {
+        if (scrollElements.length > 0) {
+          handleScrollAnimation();
+        }
+        showBackToTop();
+      }, 250);
+    });
+  },
 };
 </script>
 
