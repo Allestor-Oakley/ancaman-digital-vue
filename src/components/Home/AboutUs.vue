@@ -18,7 +18,6 @@
 
 <script>
 import AboutUsItem from "./AboutUsItem.vue";
-import scrollEvent from "../../scrollEvent.js";
 
 export default {
   name: "AboutUs",
@@ -47,34 +46,8 @@ export default {
           instagram: "https://www.instagram.com/y.rahman.p/",
         },
       ],
-      throttleTimer : false,
-      scrollEvent : scrollEvent()
     };
   },
-  methods : {
-    throttle(callback, time) {
-      if (this.throttleTimer) {
-        return;
-      }
-      this.throttleTimer = true;
-      setTimeout(() => {
-        callback();
-        this.throttleTimer = false;
-      }, time);
-    },
-    scrollHandler() {
-      this.throttle(() => {
-        this.scrollEvent.handleScrollAnimation();
-        this.scrollEvent.showBackToTop();
-      }, 250);
-    }
-  },
-  mounted() {
-    window.addEventListener("scroll", this.scrollHandler)
-  },
-  unmounted() {
-    window.removeEventListener("scroll", this.scrollHandler)
-  }
 };
 </script>
 

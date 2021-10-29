@@ -5,8 +5,41 @@
 </template>
 
 <script>
+import scrollEvent from '../scrollEvent';
 export default {
   name: "Footer",
+  data() {
+    return {
+      throttleTimer : false,
+      scrollEvent : scrollEvent()
+    }
+  },
+  methods : {
+    throttle(callback, time) {
+      if (this.throttleTimer) {
+        return;
+      }
+      this.throttleTimer = true;
+      setTimeout(() => {
+        callback();
+        this.throttleTimer = false;
+      }, time);
+    },
+    scrollHandler() {
+      this.throttle(() => {
+        if (this.scrollEvent.scrollElements.length > 0){
+          this.scrollEvent.handleScrollAnimation();
+        }
+        this.scrollEvent.showBackToTop();
+      }, 250);
+    }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.scrollHandler)
+  },
+  unmounted() {
+    window.addEventListener("scroll", this.scrollHandler)
+  }
 };
 </script>
 

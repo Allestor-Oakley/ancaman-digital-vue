@@ -46,6 +46,7 @@ export default function scrollEvent() {
     });
   };
   return {
+    scrollElements,
     handleScrollAnimation,
     showBackToTop,
   };
