@@ -14,32 +14,9 @@ export default {
       scrollEvent : scrollEvent()
     }
   },
-  methods : {
-    throttle(callback, time) {
-      if (this.throttleTimer) {
-        return;
-      }
-      this.throttleTimer = true;
-      setTimeout(() => {
-        callback();
-        this.throttleTimer = false;
-      }, time);
-    },
-    scrollHandler() {
-      this.throttle(() => {
-        if (this.scrollEvent.scrollElements.length > 0){
-          this.scrollEvent.handleScrollAnimation();
-        }
-        this.scrollEvent.showBackToTop();
-      }, 250);
-    }
-  },
   mounted() {
-    window.addEventListener("scroll", this.scrollHandler)
+    window.addEventListener("scroll", this.scrollEvent.showBackToTop)
   },
-  unmounted() {
-    window.addEventListener("scroll", this.scrollHandler)
-  }
 };
 </script>
 
