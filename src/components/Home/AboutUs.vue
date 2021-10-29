@@ -65,7 +65,6 @@ export default {
     scrollHandler() {
       this.throttle(() => {
         this.scrollEvent.handleScrollAnimation();
-        console.log("test")
         this.scrollEvent.showBackToTop();
       }, 250);
     }
