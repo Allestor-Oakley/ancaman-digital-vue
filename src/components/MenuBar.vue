@@ -14,20 +14,20 @@
       </svg>
     </div>
     <ol :class="[{ 'menu-visible': menuIsVisible }]">
-      <li @click="toggleMenu()" >
-          <router-link class="link-no-style" to="/">Home</router-link>
+      <li>
+          <router-link class="link-no-style" to="/" @click="toggleMenu()" >Home</router-link>
+      </li>
+      <li>
+          <router-link class="link-no-style" to="/Hacking" @click="toggleMenu()">Hacking</router-link>
       </li>
       <li @click="toggleMenu()" >
-        <router-link class="link-no-style" to="/Hacking">Hacking</router-link>
+          <router-link class="link-no-style" to="/Hoax" @click="toggleMenu()">Hoax</router-link>
       </li>
-      <li @click="toggleMenu()" >
-          <router-link class="link-no-style" to="/Hoax">Hoax</router-link>
+      <li>
+        <router-link class="link-no-style" to="/Malware" @click="toggleMenu()">Malware</router-link>
       </li>
-      <li @click="toggleMenu()" >
-        <router-link class="link-no-style" to="/Malware">Malware</router-link>
-      </li>
-      <li @click="toggleMenu()" >
-          <router-link class="link-no-style" to="/Scam">Scam</router-link>
+      <li>
+          <router-link class="link-no-style" to="/Scam" @click="toggleMenu()">Scam</router-link>
       </li>
     </ol>
     <div
@@ -39,21 +39,25 @@
 </template>
 
 <script>
+/* TODO: make different element for each menu control */
 export default {
-  name: "MenuBar",
-  data() {
-    return {
-      menuIsVisible: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.menuIsVisible = !this.menuIsVisible;
-      document.documentElement.style.overflow = this.menuIsVisible
-        ? "hidden"
-        : "visible";
+    name: "MenuBar",
+    data() {
+        return {
+            menuIsVisible: false,
+        };
     },
-  },
+    methods: {
+        toggleMenu() {
+            const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+            if(vw <= 800 ){
+                this.menuIsVisible = !this.menuIsVisible;
+                document.documentElement.style.overflow = this.menuIsVisible
+                    ? "hidden"
+                    : "visible";
+            }
+        },
+    },
 };
 </script>
 
