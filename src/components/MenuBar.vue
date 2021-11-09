@@ -39,7 +39,6 @@
 </template>
 
 <script>
-/* TODO: make different element for each menu control */
 export default {
     name: "MenuBar",
     data() {
