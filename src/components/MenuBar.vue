@@ -168,7 +168,7 @@ export default {
   }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 700px) and (max-width: 800px) {
   #menubar {
     height: 65px;
   }
